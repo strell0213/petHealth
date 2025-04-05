@@ -26,6 +26,7 @@ namespace VetZhukova
         private readonly VisitService _visitService;
         private readonly ServiceService _serviceService;
         private readonly ConsumableService _consumableService;
+        private readonly ProfileService _profileService;
         int chooseTab=1;       //индекс выбранной вкладки с основной панели
 
         Storyboard storyboardTab1 = new Storyboard();
@@ -41,6 +42,7 @@ namespace VetZhukova
             _visitService = new VisitService();
             _serviceService = new ServiceService();
             _consumableService = new ConsumableService();
+            _profileService = new ProfileService();
 
             if (!GlobalSettings.isAuth)
             {
@@ -263,6 +265,8 @@ namespace VetZhukova
             TCMain.SelectedIndex = 3;
             LineGHeaderBlock4.X1 = GHeaderBlock4.ActualWidth;
             chooseTab = 4;
+
+            LName.Content=_profileService.GetNameProfile();
         }
 
         private void BAddSerAndCons_MouseDown(object sender, MouseButtonEventArgs e)

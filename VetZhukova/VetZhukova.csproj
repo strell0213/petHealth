@@ -79,6 +79,7 @@
     <Compile Include="ServiceFolder\OwnerService.cs" />
     <Compile Include="ServiceFolder\ConsumableService.cs" />
     <Compile Include="ServiceFolder\PatientService.cs" />
+    <Compile Include="ServiceFolder\ProfileService.cs" />
     <Compile Include="ServiceFolder\ServiceService.cs" />
     <Compile Include="ServiceFolder\VisitService.cs" />
     <Page Include="AddlConsumableWindow.xaml">
